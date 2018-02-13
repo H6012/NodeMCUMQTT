@@ -2,8 +2,8 @@
 wifi.setmode(wifi.STATION)
 
 station_cfg={}
-station_cfg.ssid="NetworkName"
-station_cfg.pwd="NetworkPassword"
+station_cfg.ssid="username"
+station_cfg.pwd="password"
 station_cfg.save=true
 wifi.sta.config(station_cfg)
 
@@ -17,6 +17,6 @@ tmr.alarm(1, 1000, 1, function()
         print("ESP8266 mode is: " .. wifi.getmode())
         print("The module MAC address is: " .. wifi.ap.getmac())
         print("Config done, IP is "..wifi.sta.getip())
-        dofile ("script4.lua")
+        dofile ("script1.lua")
     end
 end)
